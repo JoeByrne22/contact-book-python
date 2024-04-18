@@ -8,6 +8,7 @@ class Contact:
         return "name:" + self.first_name + ' ' + self.last_name + " email: " + self.email
 
 address_book = []
+
 try:
     with open("save.txt") as save_file:
         for contact in save_file:
@@ -15,8 +16,7 @@ try:
 except FileNotFoundError as fefe:
     pass
 
-print("Hello I am an addressbook! What do you want to do?\n1.Add contact")
-print("2.Print out contacts\n3.Exit\n")
+print("Hello I am an addressbook! What do you want to do?\n1.Add contact\n2.Print out contacts\n3.Exit\n")
 while True:
     choice = int(input("Choice: "))
     if choice == 1:
